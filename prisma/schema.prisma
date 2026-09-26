@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Dossier {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  sources     Source[]
+}
+
+model Source {
+  id        String   @id @default(cuid())
+  dossierId String
+
+  title     String
+  url       String?
+  content   String
+
+  createdAt DateTime @default(now())
+
+  dossier   Dossier @relation(fields: [dossierId], references: [id], onDelete: Cascade)
+
+  @@index([dossierId])
+}
