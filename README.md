@@ -1,6 +1,6 @@
 # Journalist Research Workspace
 
-Un prototype d'application web pour permettre aux journalistes de gérer des dossiers documentaires et d'interroger leurs sources grâce à l'intelligence artificielle. Ce projet a été conçu pour un entretien technique.
+Un prototype d'application web pour permettre aux journalistes de gérer des dossiers documentaires et d'interroger leurs sources grâce à l'intelligence artificielle.
 
 ## Fonctionnalités
 
